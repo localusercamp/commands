@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Actions;
+
+use App\Contracts\IAction;
+
+abstract class Action implements IAction
+{
+  final public function __construct()
+  {
+    $this->authorize();
+  }
+
+  /**
+   * Проверяет доступ пользователя
+   */
+  public function authorize(): void {}
+}

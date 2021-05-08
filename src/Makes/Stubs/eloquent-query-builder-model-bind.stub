@@ -1,0 +1,4 @@
+  public function newEloquentBuilder($query): {{class}}
+  {
+    return new {{class}}($query);
+  }

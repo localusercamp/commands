@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Collections;
+
+use Illuminate\Database\Eloquent\Collection as EloquentCollection;
+
+use App\Interfaces\ICustomEloquentCollection;
+
+abstract class CustomEloquentCollection extends EloquentCollection implements ICustomEloquentCollection
+{
+
+}

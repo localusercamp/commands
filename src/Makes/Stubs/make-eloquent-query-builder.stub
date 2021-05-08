@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Builders\CustomEloquentQueryBuilder;
+
+class {{ class }} extends CustomEloquentQueryBuilder
+{
+  //
+}

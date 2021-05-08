@@ -1,0 +1,4 @@
+  public function newCollection(array $models = []): {{class}}
+  {
+    return new {{class}}($models);
+  }

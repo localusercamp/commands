@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Tasks;
+
+use App\Contracts\ITask;
+
+abstract class Task implements ITask
+{
+  # Блокировка инстанцирования
+  final private function __construct() {}
+}

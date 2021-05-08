@@ -1,0 +1,38 @@
+{
+  "name": "thread-media/commands",
+  "description": "Laravel 8 PHP 8 artisan commands package.",
+  "keywords": [
+    "thread-media",
+    "commands"
+  ],
+  "type": "artisan-commands",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "localusercamp",
+      "email": "user062199@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "laravel/framework": "^8.0",
+    "php": "^8.0",
+    "illuminate/console": "^7|^8"
+  },
+  "require": {
+    "laravel/framework": "^8.0",
+    "php": "^8.0",
+    "illuminate/console": "^7|^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "TM\\Commands\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TM\\Commands\\TMCommandsServiceProvider"
+      ]
+    }
+  }
+}
