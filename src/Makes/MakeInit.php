@@ -14,22 +14,6 @@ class MakeInit extends GeneratorCommand
 
   protected $description = 'Generates initial namespaces, folders, classes and contracts.';
 
-  protected $init_stubs_folder = __DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Init';
-
-  protected $namespaces = [
-    'Contracts'  => 'App\\Contracts',
-    'Interfaces' => 'App\\Interfaces',
-  ];
-
-  protected function getStub()
-  {
-  }
-
-  protected function getArguments()
-  {
-    return [];
-  }
-
   /**
    * Execute the console command.
    */
@@ -150,25 +134,7 @@ class MakeInit extends GeneratorCommand
     $file_name = $this->constructPhpFileName('ICustomEloquentQueryBuilder');
     $this->constructClassContract($file_name, $stub);
   }
-
-  /**
-   * Get the console command options.
-   *
-   * @return array
-   */
-  protected function getOptions()
-  {
-    return [
-      ['force',     null, InputOption::VALUE_NONE, 'Run commnad even if the instances already exists'],
-      ['no-base',      null, InputOption::VALUE_NONE, 'Generate folder-file structure for base classes'],
-      ['no-contract',  null, InputOption::VALUE_NONE, 'Generate folder-file structure for contracts'],
-      ['action',     'a', InputOption::VALUE_NONE, 'Generate folder-file structure for actions'],
-      ['task',       't', InputOption::VALUE_NONE, 'Generate folder-file structure for tasks'],
-      ['collection', 'c', InputOption::VALUE_NONE, 'Generate folder-file structure for eloquent collections'],
-      ['builder',    'b', InputOption::VALUE_NONE, 'Generate folder-file structure for eloquent query builders'],
-    ];
-  }
-
+  
   protected function getBaseClassStub(string $stub_name): string
   {
     return file_get_contents($this->constructPath([__DIR__, 'Stubs', 'Init', 'BaseClasses', "$stub_name.stub"]));
@@ -177,5 +143,23 @@ class MakeInit extends GeneratorCommand
   protected function getContractStub(string $file_name): string
   {
     return file_get_contents($this->constructPath([__DIR__, 'Stubs', 'Init', 'Contracts', "$file_name.stub"]));
+  }
+
+  protected function getOptions()
+  {
+    return [
+      ['force',       null, InputOption::VALUE_NONE, 'Run commnad even if the instances already exists'],
+      ['no-base',     null, InputOption::VALUE_NONE, 'Generate folder-file structure for base classes'],
+      ['no-contract', null, InputOption::VALUE_NONE, 'Generate folder-file structure for contracts'],
+      ['action',      'a', InputOption::VALUE_NONE, 'Generate folder-file structure for actions'],
+      ['task',        't', InputOption::VALUE_NONE, 'Generate folder-file structure for tasks'],
+      ['collection',  'c', InputOption::VALUE_NONE, 'Generate folder-file structure for eloquent collections'],
+      ['builder',     'b', InputOption::VALUE_NONE, 'Generate folder-file structure for eloquent query builders'],
+    ];
+  }
+
+  protected function getArguments()
+  {
+    return [];
   }
 }

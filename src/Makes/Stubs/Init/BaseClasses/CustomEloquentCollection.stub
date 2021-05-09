@@ -4,7 +4,7 @@ namespace App\Collections;
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 
-use App\Interfaces\ICustomEloquentCollection;
+use App\Contracts\ICustomEloquentCollection;
 
 abstract class CustomEloquentCollection extends EloquentCollection implements ICustomEloquentCollection
 {
