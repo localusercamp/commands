@@ -8,7 +8,7 @@ trait InjectorTrait
 {
   public function injectIntoEndOfClass(string $path_to_file, string $inject): void
   {
-    $replace      = "{$inject}\n}";
+    $replace      = "\n{$inject}}";
     $file_content = file_get_contents($path_to_file);
     $injected     = Str::replaceLast('}', $replace, $file_content);
     file_put_contents($path_to_file, $injected);
