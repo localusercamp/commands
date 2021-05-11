@@ -134,7 +134,7 @@ class MakeInit extends GeneratorCommand
     $file_name = $this->constructPhpFileName('ICustomEloquentQueryBuilder');
     $this->constructClassContract($file_name, $stub);
   }
-  
+
   protected function getBaseClassStub(string $stub_name): string
   {
     return file_get_contents($this->constructPath([__DIR__, 'Stubs', 'Init', 'BaseClasses', "$stub_name.stub"]));
@@ -161,5 +161,10 @@ class MakeInit extends GeneratorCommand
   protected function getArguments()
   {
     return [];
+  }
+
+  protected function getStub()
+  {
+    return parent::getStub();
   }
 }
