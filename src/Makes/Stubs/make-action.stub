@@ -4,14 +4,12 @@ namespace {{ namespace }};
 
 use {{ rootNamespace }}Actions\Action;
 
-/**
- *
- */
+/**  */
 final class {{ class }} extends Action
 {
   public function authorize(): void
   {
-    //
+
   }
 
   /**

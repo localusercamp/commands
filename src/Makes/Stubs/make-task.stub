@@ -4,9 +4,7 @@ namespace {{ namespace }};
 
 use {{ rootNamespace }}Tasks\Task;
 
-/**
- *
- */
+/**  */
 final class {{ class }} extends Task
 {
   /**
@@ -14,6 +12,6 @@ final class {{ class }} extends Task
    */
   public static function run()
   {
-    //
+    
   }
 }
