@@ -21,7 +21,7 @@ class TMCommandsServiceProvider extends ServiceProvider
    */
   public function register()
   {
-    $this->mergeConfigFrom(__DIR__ . DIRECTORY_SEPARATOR . 'config.php', 'tm-commands');
+    // $this->mergeConfigFrom(self::CONFIG_PATH, 'tm-commands');
   }
 
   /**
@@ -31,6 +31,10 @@ class TMCommandsServiceProvider extends ServiceProvider
    */
   public function boot()
   {
+    $this->publishes([
+      __DIR__ . DIRECTORY_SEPARATOR . 'config.php' => config_path('tm-commands.php'),
+    ]);
+
     if ($this->app->runningInConsole()) {
       $this->commands([
         MakeContract::class,

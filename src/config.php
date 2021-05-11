@@ -15,6 +15,9 @@ return [
     'eloquent-query-builders' => '\Builders\EloquentQueryBuilders',
   ],
 
+  /**
+   * Specify the default paths
+   */
   'path' => [
     'action'                 => 'Actions',
     'task'                   => 'Tasks',
