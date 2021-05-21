@@ -19,12 +19,12 @@ class ArchInit extends GeneratorCommand
 
     protected function getBaseClassStub(string $stub_name): string
     {
-        return $this->files->get($this->constructPath([__DIR__, 'Stubs', 'Init', 'BaseClasses', "$stub_name.stub"]));
+        return $this->files->get($this->constructPath([__DIR__, 'Makes', 'Stubs', 'Init', 'BaseClasses', "$stub_name.stub"]));
     }
 
     protected function getBaseContractStub(string $stub_name): string
     {
-        return $this->files->get($this->constructPath([__DIR__, 'Stubs', 'Init', 'Contracts', "$stub_name.stub"]));
+        return $this->files->get($this->constructPath([__DIR__, 'Makes', 'Stubs', 'Init', 'Contracts', "$stub_name.stub"]));
     }
 
     protected function buildBaseClass(string $name, string $stub_name)
