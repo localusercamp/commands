@@ -1,16 +1,13 @@
 <?php
 
-namespace TM\Commands\Makes;
+namespace TM\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 use TM\Commands\ConfigNamespaceImploder;
-use TM\Commands\NamespacesAndPathsTrait;
 
 class ArchInit extends GeneratorCommand
 {
-    use NamespacesAndPathsTrait;
-
     protected $name = 'arch:init';
 
     protected $description = 'Generates initial namespaces, folders, classes and contracts.';

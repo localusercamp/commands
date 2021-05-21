@@ -9,7 +9,7 @@ use TM\Commands\Makes\MakeTask;
 use TM\Commands\Makes\MakeEntity;
 use TM\Commands\Makes\MakeEloquentCollection;
 use TM\Commands\Makes\MakeEloquentQueryBuilder;
-use TM\Commands\Makes\ArchInit;
+use TM\Commands\ArchInit;
 use TM\Commands\Makes\MakeModel;
 use TM\Commands\CommandsInstall;
 
