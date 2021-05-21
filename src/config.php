@@ -11,6 +11,5 @@ return [
         'entities'                => ['Entities'],
         'eloquent-collections'    => ['Collections', 'EloquentCollections'],
         'eloquent-query-builders' => ['Builders', 'EloquentQueryBuilders'],
-        'buldozer' => ['Buldozer', 'BuldozerPass'],
     ],
 ];
