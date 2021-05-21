@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Builders;
+namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Builder as EloquentQueryBuilder;
 
-use App\Contracts\ICustomEloquentQueryBuilder;
+use {{ baseContractNamespace }};
 
 abstract class CustomEloquentQueryBuilder extends EloquentQueryBuilder implements ICustomEloquentQueryBuilder
 {

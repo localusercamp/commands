@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use {{ rootNamespace }}Collections\CustomEloquentCollection;
+use {{ baseClassNamespace }};
 
 class {{ class }} extends CustomEloquentCollection
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Collections;
+namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 
-use App\Contracts\ICustomEloquentCollection;
+use {{ baseContractNamespace }};
 
 abstract class CustomEloquentCollection extends EloquentCollection implements ICustomEloquentCollection
 {
