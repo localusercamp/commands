@@ -155,6 +155,6 @@ class MakeEloquentCollection extends GeneratorCommand
 
     protected function isNewCollectionDirectiveExistsInFile(string $file_path): bool
     {
-        return strpos(file_get_contents($file_path), 'function newCollection(') !== false;
+        return str_contains(file_get_contents($file_path), 'function newCollection(');
     }
 }

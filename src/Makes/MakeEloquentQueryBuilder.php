@@ -152,6 +152,6 @@ class MakeEloquentQueryBuilder extends GeneratorCommand
 
     protected function isNewEloquentBuilderDirectiveExistsInFile(string $file_path): bool
     {
-        return strpos(file_get_contents($file_path), 'function newEloquentBuilder(') !== false;
+        return str_contains(file_get_contents($file_path), 'function newEloquentBuilder(');
     }
 }
