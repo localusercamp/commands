@@ -9,10 +9,18 @@ abstract class Action implements IAction
   final public function __construct()
   {
     $this->authorize();
+    $this->init();
   }
 
   /**
    * Проверяет доступ пользователя
    */
   public function authorize(): void {}
+
+  /**
+   * Метод инициализации необходимых свойств
+   */
+  public function init(): void
+  {
+  }
 }

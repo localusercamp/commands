@@ -9,7 +9,10 @@ final class {{ class }} extends Action
 {
   public function authorize(): void
   {
+  }
 
+  public function init(): void
+  {
   }
 
   /**
