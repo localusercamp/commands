@@ -4,23 +4,24 @@ namespace {{ namespace }};
 
 use {{ baseContractNamespace }};
 
-abstract class Action implements IAction
+abstract class Action
 {
-  final public function __construct()
+  /**
+   * Проверяет доступ пользователя к выполнению экшена
+   */
+  protected function authorize(): void {}
+
+  /**
+   * Основной код экшена
+   */
+  protected abstract function run(): array;
+
+  /**
+   * Выполнение экшена
+   */
+  public function __invoke(): array
   {
     $this->authorize();
-    $this->init();
-  }
-
-  /**
-   * Проверяет доступ пользователя
-   */
-  public function authorize(): void {}
-
-  /**
-   * Метод инициализации необходимых свойств
-   */
-  public function init(): void
-  {
+    return $this->run();
   }
 }

@@ -7,19 +7,19 @@ use {{ rootNamespace }}Actions\Action;
 /**  */
 final class {{ class }} extends Action
 {
-  public function authorize(): void
-  {
-    
-  }
-
-  public function init(): void
-  {
-
-  }
-
   /**
    *
    */
+  public function __construct()
+  {
+    //
+  }
+
+  public function authorize(): void
+  {
+    //
+  }
+
   public function run(): array
   {
     return [];
