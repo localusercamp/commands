@@ -4,7 +4,7 @@ namespace {{ namespace }};
 
 use {{ baseContractNamespace }};
 
-abstract class Action
+abstract class Action implements IAction
 {
   /**
    * Проверяет доступ пользователя к выполнению экшена
