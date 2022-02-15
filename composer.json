@@ -1,6 +1,6 @@
 {
   "name": "thread-media/commands",
-  "description": "Laravel 8 PHP 8 artisan commands package.",
+  "description": "Laravel artisan commands package.",
   "keywords": [
     "thread-media",
     "commands"
@@ -13,14 +13,9 @@
       "email": "user062199@gmail.com"
     }
   ],
-  "require-dev": {
-    "laravel/framework": "^8.0",
-    "php": "^8.0",
-    "illuminate/console": "^7|^8"
-  },
   "require": {
-    "laravel/framework": "^8.0",
-    "php": "^8.0",
+    "php": "^8.0|^8.1",
+    "laravel/framework": "^8|^9",
     "illuminate/console": "^7|^8"
   },
   "autoload": {
